@@ -22,7 +22,7 @@ public class NativeDriver implements WebcamDriver, WebcamDiscoverySupport {
         final String os = System.getProperty("os.name", "generic").toLowerCase(Locale.ENGLISH);
 
         if ((os.contains("mac")) || (os.contains("darwin"))) {
-            this.driver = new AVFDriver();
+            this.driver = new NokhwaDriver();
         } else if (os.contains("win")) {
             this.driver = new NokhwaDriver();
         } else {
